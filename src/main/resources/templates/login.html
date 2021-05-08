@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/AdminLTE.css">
+</head>
+
+<body class="hold-transition login-page">
+  <div class="login-box">
+    <div class="login-logo">
+      <a href="#"><b>LOGIN</b></a>
+    </div>
+    <div class="login-box-body">
+      <p class="login-box-msg">Sign in to start your session</p>
+
+      <form th:action="@{/form}" th:object="${user}" method="post">
+        <div class="form-group has-feedback">
+          <input type="text" th:field="*{userName}" class="form-control" placeholder="Email">
+        </div>
+        <div class="form-group has-feedback">
+          <input type="password" th:field="*{password}" class="form-control" placeholder="Password">
+        </div>
+        <div class="row">
+          <div class="col-xs-8">
+            <div class="checkbox">
+              <!--  <label> <input id="rem-me-chk" type="checkbox">-->
+               <span th:utext="${user.message}"></span>
+              <!--</label>-->
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <button id="sign-in-btn" type="submit" class="btn btn-info btn-block btn-flat">Login</button>
+          </div>
+        </div>
+       </form>
+      <a href="#">I forgot my password</a><br> <a href="#" class="text-center">Register a new membership</a>
+    </div>
+  </div>
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/bootstrap.js"></script>
+  
+</body>
+
+</html>
