@@ -1,8 +1,14 @@
 package com.example.demo.service;
 
+import java.util.List;
+
 import com.example.demo.model.User;
 
 public interface UserService {
-	User findUser(User user);
-	User login(User user);
+	public List<User> queryAll();
+
+	public int add(User user);
+
+	public User queryByUserName(String userName);
+
 }

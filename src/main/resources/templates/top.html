@@ -13,15 +13,15 @@
 <body class="hold-transition login-page">
 	<div class="login-box">
 		<div class="login-logo">
-			<a href="#"><b>TOP</b></a>
+			<a href="#"><b>LOGIN</b></a>
 		</div>
 		<div class="login-box-body">
 			<p class="login-box-msg">Sign in to start your session</p>
 
-		<!--<form th:action="@{/user/form}" th:object="${user}" method="post">-->
+			<form th:action="@{/form}" th:object="${user}" method="post">
 				<div class="form-group has-feedback"></div>
 				<div class="form-group has-feedback"></div>
-				<span th:inline="text"> Email： [[${user.userName}]]<br>
+				<span th:inline="text"> Email： [[${user.email}]]<br>
 					Password： [[${user.password}]]<br>
 				</span>
 				<div class="row">
@@ -37,7 +37,7 @@
 							class="btn btn-info btn-block btn-flat">Login</button>
 					</div>
 				</div>
-			<!--  </form> -->
+			</form>
 			<a href="#">I forgot my password</a><br> <a href="#"
 				class="text-center">Register a new membership</a>
 		</div>

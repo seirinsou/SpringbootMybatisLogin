@@ -1,5 +1,6 @@
 package com.example.demo.service.impl;
 
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,21 +9,24 @@ import com.example.demo.mapper.UserMapper;
 import com.example.demo.model.User;
 import com.example.demo.service.UserService;
 
-@Service("userService")
+@Service
 public class UserServiceImpl implements UserService {
 
 	@Autowired
-	private UserMapper userMapper;
+	UserMapper userMapper;
 
 	@Override
-	public User login(User user ) {
-		return userMapper.login(user.getUserName(), user.getPassword());
+	public List<User> queryAll() {
+		return userMapper.queryAll();
 	}
 
 	@Override
-	public User findUser(User user) {
-		return userMapper.login(user.getUserName(), user.getPassword());
+	public int add(User user) {
+		return userMapper.add(user);
 	}
-	
 
+	@Override
+	public User queryByUserName(String userName) {
+		return userMapper.queryByUserName(userName);
+	}
 }
