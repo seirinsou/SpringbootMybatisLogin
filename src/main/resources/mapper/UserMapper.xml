@@ -3,14 +3,17 @@
 <mapper namespace="com.example.demo.mapper.UserMapper">
 
 	<select id="queryAll" resultType="com.example.demo.model.User">
-		select * from users
+		select user_name,password from users
 	</select>
 	<insert id="add" parameterType="com.example.demo.model.User">
 		insert into users values (#{userName},#{password})
 	</insert>
+	<insert id="add1" parameterType="com.example.demo.model.AddInformation">
+		insert into userTable values (#{name},#{sex},#{phoneNumber},#{applicationDate},#{bornDate},#{manager},#{netType},#{netPlan},#{postcode},#{address},#{notes})
+	</insert>
 	<select id="queryByUserName"
 		resultType="com.example.demo.model.User">
-		select * from users where user_name=#{userName}
+		select user_name,password from users where user_name=#{userName}
 	</select>
 
 </mapper>

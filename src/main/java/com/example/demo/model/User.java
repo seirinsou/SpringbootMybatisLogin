@@ -7,22 +7,12 @@ public class User {
 
 	private int user_Id;
 	@NotBlank
-	// @Email
 	@Size(min = 3, max = 20)
 	private String userName;
 	@NotBlank
 	@Size(min = 6, max = 10)
 	private String password;
-
-//  private String message;
-//
-//	public String getMessage() {
-//		return message;
-//	}
-//
-//	public void setMessage(String message) {
-//		this.message = message;
-//	}
+	
 	public int getUser_Id() {
 		return user_Id;
 	}
@@ -46,4 +36,5 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
 }

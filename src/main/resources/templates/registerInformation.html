@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>register</title>
+</head>
+<body background="back.jpg">
+	<div align="center">
+		<br> <br>
+		<h1>新规用户信息登录</h1>
+		<br> <br>
+		<form method="get" action="/toRegisterInformationSuccess">
+			*姓名:<input type="text" name="name" placeholder="输入申请人姓名" required />
+			*性别:<input type="text" name="sex" placeholder="选择性别" required /><br> <br> 
+		
+			<br> <br> 
+			*手机号码:<input type="text" name="phoneNumber" placeholder="输入手机号码" required /> 
+			*申请日期:<input type="text" name="applicationDate" placeholder="输入申请日期" required/><br> <br>
+			<br> <br> 
+			*出生日期:<input type="text" name="bornDate" placeholder="输入出生日期年月日" required /> 
+			*入力担当:<input type="text" name="manager" placeholder="输入入力担当" required /><br> <br>
+			<br> <br> 
+			*运营商名:<input type="text" name="netType" placeholder="输入运营商" required />
+			*网络套餐:<input type="text" name="netPlan" placeholder="输入网络类型" required /><br>	<br> 
+			<br> <br> 
+			*邮编:<input type="text" name="postcode" placeholder="输入邮编" required /> 
+			*地址:<input type="text" name="address" placeholder="输入申请地址" required /><br> <br>
+			<br> <br> 
+			*回执信息:<input type="text" name="notes" placeholder="备考" required /><br> <br> 
+			<input type="submit" value="登录客户信息">
+		</form>
+	</div>
+</body>
+</html>
