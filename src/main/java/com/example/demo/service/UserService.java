@@ -6,14 +6,12 @@ import com.example.demo.model.AddInformation;
 import com.example.demo.model.User;
 
 public interface UserService {
-	public List<User> queryAll();
+    public List<User> queryAll();
 
-	public int add(User user);
-	
-	public int add1(AddInformation addinfor);
+    public int add(User user);
 
-	public User queryByUserName(String userName);
-	
-	
+    public int add1(AddInformation addinfor);
+
+    public User queryByUserName(String userName);
 
 }

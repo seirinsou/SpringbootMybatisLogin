@@ -14,28 +14,28 @@ import com.example.demo.service.UserService;
 @Service
 public class UserServiceImpl implements UserService {
 
-	@Autowired
-	UserMapper userMapper;
+    @Autowired
+    UserMapper userMapper;
 
-	@Override
-	public List<User> queryAll() {
-		return userMapper.queryAll();
-	}
+    @Override
+    public List<User> queryAll() {
+        return userMapper.queryAll();
+    }
 
-	@Override
-	@Transactional
-	public int add(User user) {
-		return userMapper.add(user);
-	}
-	
-	@Override
-	@Transactional
-	public int add1(AddInformation addinfor) {
-		return userMapper.add1(addinfor);
-	}
+    @Override
+    @Transactional
+    public int add(User user) {
+        return userMapper.add(user);
+    }
 
-	@Override
-	public User queryByUserName(String userName) {
-		return userMapper.queryByUserName(userName);
-	}
+    @Override
+    @Transactional
+    public int add1(AddInformation addinfor) {
+        return userMapper.add1(addinfor);
+    }
+
+    @Override
+    public User queryByUserName(String userName) {
+        return userMapper.queryByUserName(userName);
+    }
 }

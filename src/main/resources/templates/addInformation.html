@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>register</title>
+</head>
+<body background="back.jpg">
+	<div align="center">
+		<br> <br>
+		<h1>新規ユーザー情報登録</h1>
+		<br>
+		<form method="get" action="/checkInformation">
+			氏名:
+			<input type="text" name="name" placeholder="氏名" required />
+			性別:
+			<input type="radio" name="sex" value="男" />男
+			<input type="radio" name="sex" value="女" />女 <br> <br>
+			<br>
+			携帯番号:
+			<input type="text" name="phoneNumber" placeholder="携帯番号入力" required />
+			申込日付:
+			<input type="text" name="applicationDate" placeholder="申込日付" required /> <br> <br>
+			<br>
+			誕生日:
+			<input type="text" name="bornDate" placeholder="誕生日" required />
+			入力担当:
+			<input type="text" name="manager" placeholder="入力担当" required /> <br> <br>
+			<br>
+			ネット会社:
+			<select name="netType" id="netType">
+				<option value="">選択...</option>
+				<option value="AU" th:selected="${netType=='AU'}">AU</option>
+				<option value="SOFTBANK" th:selected="${netType=='SOFTBANK'}">SOFTBANK</option>
+				<option value="DOCOMO" th:selected="${netType=='3'}">DOCOMO</option>
+			</select>
+			ネットプラン:
+			<select name="netPlan" id="netPlan">
+				<option value="">選択...</option>
+				<option value="ファミリータイプ" th:selected="${netPlan=='ファミリータイプ'}">ファミリータイプ</option>
+				<option value="マンションタイプ" th:selected="${netPlan=='マンションタイプ'}">マンションタイプ</option>
+				<option value="ミニータイプ" th:selected="${netPlan=='ミニータイプ'}">ミニータイプ</option>
+			</select><br> <br>
+			<br>
+			郵便番号:
+			<input type="text" name="postcode" placeholder="番号入力" required />
+			住所:
+			<input type="text" name="address" placeholder="住所入力" required /> <br> <br>
+			<br>
+			備考欄:
+			<input type="text" name="notes" placeholder="備考" /> <br> <br>
+			<br>
+			<br>
+			<input type="submit" value="登録確認">
+		</form>
+	</div>
+</body>
+</html>

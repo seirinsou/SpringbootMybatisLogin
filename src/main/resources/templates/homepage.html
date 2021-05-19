@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>登録完了</title>
+</head>
+<body background="back.jpg">
+	<div align="center">
+		<br>
+		<br>
+		<h1>こんにちは！[[${user.userName }]]</h1>
+		<br>
+		<br> <span th:text="${message}"
+			style="text-color: red; font-size: 10px"></span>
+		<form method="get" action="/toFindInformation">
+			<select>
+				<option value="name">氏名</option>
+				<option value="phoneNumber">携帯番号</option>
+				<option value="applicationDate">申込日付</option>
+				<option value="manager">入力担当</option>
+			</select> <input type="text" name="phoneNumber" placeholder="情報入力" required />
+			<input type="submit" value="検索"><br>
+			<br>
+		</form>
+		<br>
+		<form method="get" action="/addInformation">
+			<input type="submit" value="ユーザー情報登録">
+		</form>
+	</div>
+</body>
+</html>

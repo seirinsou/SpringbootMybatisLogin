@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
- <meta charset="UTF-8">
- <title>login</title>
+<meta charset="UTF-8">
+<title>login</title>
 </head>
-<body background="back.jpg">
-<div align="center">
- <br><br><h2>登录界面</h2><br><br>
- <span th:text="${message}" style="text-color:red;font-size: 10px"></span>
- <form method="get" action="/loginSuccess">
-  用户名:<input type="text" name="userName" placeholder="请输入用户名" required/><br><br>
-  密码：<input type="text" name="password" placeholder="请输入密码" required/><br><br>
-  <input type="submit" value="登录">
- </form>
- <br>
- <form method="get" action="/toRegister">
-  <input type="submit" value="注册">
- </form>
-</div>
+<body background="sky.jpg">
+	<div align="center">
+		<br>
+		<br>
+		<h2>ログイン画面</h2>
+		<br>
+		<br> <span th:text="${message}"
+			style="text-color: red; font-size: 10px"></span>
+		<form method="get" action="/Homepage">
+			ユーザー名:<input type="text" name="userName" placeholder="ユーザー名入力" required /><br>
+			<br>
+			パスワード：<input type="text" name="password" placeholder="パスワード入力" required /><br>
+			<br>
+			<input type="submit" value="登録">
+		</form>
+		<br>
+		<form method="get" action="/Register">
+			<input type="submit" value="新規登録">
+		</form>
+	</div>
 </body>
 </html>

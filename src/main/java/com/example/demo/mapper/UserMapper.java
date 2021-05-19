@@ -8,11 +8,11 @@ import com.example.demo.model.User;
 
 @Repository
 public interface UserMapper {
-	public List<User> queryAll();
-	 
-	 public int add(User user);
-	 
-	 public int add1(AddInformation addinfor);
+    public List<User> queryAll();
 
-	 public User queryByUserName(String userName);
+    public int add(User user);
+
+    public int add1(AddInformation addinfor);
+
+    public User queryByUserName(String userName);
 }
