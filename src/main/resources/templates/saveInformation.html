@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>登録完了</title>
+</head>
+<body background="back.jpg">
+	<div align="center">
+		<br>
+		<br>
+		<h1>データ保存</h1>
+		<br>
+		<br> <span th:text="${message}"
+			style="text-color: red; font-size: 10px"></span>
+		<form method="post" action="/homepage">
+			<table class="ui celled table table table-hover">
+				<tr>
+					<td>氏名:</td>
+					<td th:text="${addinfor.name}"></td>
+				</tr>
+				<tr>
+					<td>性別:</td>
+					<td th:text="${addinfor.sex}"></td>
+				</tr>
+				<tr>
+					<td>携帯番号:</td>
+					<td th:text="${addinfor.phoneNumber}"></td>
+				</tr>
+				<tr>
+					<td>申込日付:</td>
+					<td th:text="${addinfor.applicationDate}"></td>
+				</tr>
+				<tr>
+					<td>誕生日:</td>
+					<td th:text="${addinfor.bornDate}"></td>
+				</tr>
+				<tr>
+					<td>入力担当:</td>
+					<td th:text="${addinfor.manager}"></td>
+				</tr>
+				<tr>
+					<td>ネット会社:</td>
+					<td th:text="${addinfor.netType}"></td>
+				</tr>
+				<tr>
+					<td>ネットプラン:</td>
+					<td th:text="${addinfor.netPlan}"></td>
+				</tr>
+				<tr>
+					<td>郵便番号:</td>
+					<td th:text="${addinfor.postcode}"></td>
+				</tr>
+				<tr>
+					<td>住所:</td>
+					<td th:text="${addinfor.address}"></td>
+				</tr>
+				<tr>
+					<td>備考欄:</td>
+					<td th:text="${addinfor.notes}"></td>
+				</tr>
+			</table>
+			<input type="submit" value="ホームページへ戻る">
+		</form>
+	</div>
+</body>
+</html>
