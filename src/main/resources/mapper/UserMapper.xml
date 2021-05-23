@@ -2,19 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.example.demo.mapper.UserMapper">
 
-	<select id="queryAll" resultType="com.example.demo.model.AddInformation">
-		select name,sex,phoneNumber,applicationDate,bornDate,manager,netType,netPlan,postcode,address,notes from userTable
-	</select>
-	<select id="findById"
-		resultType="com.example.demo.model.AddInformation">
-		select name,sex,phoneNumber,applicationDate,bornDate,manager,netType,netPlan,postcode,address,notes from userTable where name=#{Name}
-	</select>
-	<insert id="add" parameterType="com.example.demo.model.User">
-		insert into users values (#{userName},#{password})
-	</insert>
-	<insert id="add1" parameterType="com.example.demo.model.AddInformation">
-		insert into userTable values (#{name},#{sex},#{phoneNumber},#{applicationDate},#{bornDate},#{manager},#{netType},#{netPlan},#{postcode},#{address},#{notes})
-	</insert>
 	<select id="queryByUserName"
 		resultType="com.example.demo.model.User">
 		select user_name,password from users where user_name=#{userName}
