@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.example.demo.model.AddInformation;
 import com.example.demo.model.User;
 import com.example.demo.service.UserService;
+import java.util.List;
 
 @Controller
 public class UserController {
@@ -33,11 +34,17 @@ public class UserController {
                 model.addAttribute("message", "密码不正确");
                 return "login";
             }
-
         } else {
             model.addAttribute("message", "该用户不存在，请先注册");
             return "login";
         }
+    }
+
+    @RequestMapping("/list")
+    public String displayList(Model model) {
+        List<AddInformation> informationList = userService.queryAll();
+        model.addAttribute("informationList", informationList);
+        return "list";
     }
 
     @RequestMapping("/Register")

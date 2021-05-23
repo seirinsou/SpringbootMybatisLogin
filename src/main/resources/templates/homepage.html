@@ -12,14 +12,8 @@
 		<br>
 		<br> <span th:text="${message}"
 			style="text-color: red; font-size: 10px"></span>
-		<form method="get" action="/toFindInformation">
-			<select>
-				<option value="name">氏名</option>
-				<option value="phoneNumber">携帯番号</option>
-				<option value="applicationDate">申込日付</option>
-				<option value="manager">入力担当</option>
-			</select> <input type="text" name="phoneNumber" placeholder="情報入力" required />
-			<input type="submit" value="検索"><br>
+		<form method="get" action="/list">
+			<input type="submit" value="ユーザー情報一覧へ"><br>
 			<br>
 		</form>
 		<br>

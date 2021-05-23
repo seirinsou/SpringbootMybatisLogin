@@ -6,7 +6,11 @@ import com.example.demo.model.AddInformation;
 import com.example.demo.model.User;
 
 public interface UserService {
-    public List<User> queryAll();
+    public List<AddInformation> queryAll();
+
+    public AddInformation findById(String name);
+    
+    public void delete(String name);
 
     public int add(User user);
 
