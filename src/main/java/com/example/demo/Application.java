@@ -7,11 +7,11 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @EnableTransactionManagement
-@MapperScan
-public class SpringMvc1Application {
+@MapperScan("com.example.demo.*.mapper")
+public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringMvc1Application.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
 }

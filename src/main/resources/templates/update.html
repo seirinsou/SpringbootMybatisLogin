@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<link href="/css/list.css" rel="stylesheet"></link>
+	<body>
+		<form action="/toupinfor" method="post">
+			<div class="box_up">
+					<input type="hidden" name="name" th:value="${addInformation.idx}"/>
+				<div class="box_in">
+					<label>氏名:</label>
+					<input class="zone_de_texte" id="name" type="text" name="name" th:value="${addInformation.name}"/>
+				</div>
+				<div class="box_in">
+					<label>性別:</label>
+					<input class="zone_de_texte" type="sex" name="sex" th:value="${addInformation.sex}"/>
+				</div>
+				<div class="box_in">
+					<label>電話番号:</label>
+					<input class="zone_de_texte" type="tel" name="phoneNumber" th:value="${addInformation.phoneNumber}"/>
+				</div>
+				<div class="box_in">
+					<label>申込日時:</label>
+					<input class="zone_de_texte" type="text" name="applicationDate" th:value="${addInformation.applicationDate}"/>
+				</div>
+				<div class="box_in">
+					<label>生年月日:</label>
+					<input class="zone_de_texte" type="text" name="bornDate" th:value="${addInformation.bornDate}"/>
+				</div>
+				<div class="box_in">
+					<label>入力担当:</label>
+					<input class="zone_de_texte" type="text" name="manager" th:value="${addInformation.manager}"/>
+				</div>
+				<div class="box_in">
+					<label>ネット会社:</label>
+					<input class="zone_de_texte" type="text" name="netType" th:value="${addInformation.netType}"/>
+				</div>
+				<div class="box_in">
+					<label>ネットプラン:</label>
+					<input class="zone_de_texte" type="text" name="netPlan" th:value="${addInformation.netPlan}"/>
+				</div>
+				<div class="box_in">
+					<label>郵便番号:</label>
+					<input class="zone_de_texte" type="text" name="postcode" th:value="${addInformation.postcode}"/>
+				</div>
+				<div class="box_in">
+					<label>住所:</label>
+					<input class="zone_de_texte" type="text" name="address" th:value="${addInformation.address}"/>
+				</div>
+				<div class="box_in">
+					<label>備考:</label>
+					<input class="zone_de_texte" type="text" name="notes" th:value="${addInformation.notes}"/>
+				</div>
+				<div class="box_btn">
+					<input class="button" type="submit" value="確定"/>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>
+

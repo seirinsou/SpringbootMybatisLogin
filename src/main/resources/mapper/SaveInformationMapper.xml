@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.example.demo.mapper.SaveInformationMapper">
+<mapper namespace="com.example.demo.save.mapper.SaveInformationMapper">
 
-	<insert id="add" parameterType="com.example.demo.model.AddInformation">
-		insert into userTable values (#{name},#{sex},#{phoneNumber},#{applicationDate},#{bornDate},#{manager},#{netType},#{netPlan},#{postcode},#{address},#{notes})
+	<insert id="add" parameterType="com.example.demo.save.model.AddInformation">
+		insert into userTable (name, sex, phoneNumber, applicationDate, bornDate, manager, netType, netPlan, postcode, address, notes)
+		values (#{name},#{sex},#{phoneNumber},#{applicationDate},#{bornDate},#{manager},#{netType},#{netPlan},#{postcode},#{address},#{notes})
 	</insert>
 
 </mapper>

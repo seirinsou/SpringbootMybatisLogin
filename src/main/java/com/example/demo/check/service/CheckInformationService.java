@@ -1,6 +1,6 @@
 package com.example.demo.check.service;
 
-import com.example.demo.model.AddInformation;
+import com.example.demo.check.model.AddInformation;
 
 public interface CheckInformationService {
 

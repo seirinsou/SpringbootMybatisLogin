@@ -1,20 +1,88 @@
-body {
-  width: 90%;
-}
-table{
-    width: 100%;
-    border-collapse: collapse;
-  font-size: 12px;
+* {
+	margin: 0;
+	padding: 0;
+	background: #e1e1ce;
 }
 
-table th, table td {
-    border: 1px solid #ddd;
-    padding: 6px;
+.inforlist-box {
+	width: 1000px;
+	margin: 50px auto;
 }
 
-table th {
-  background-color: #F2F2F2;
+.inforlist-box option {
+	text-align: center;
+	padding-bottom: 30px;
+	font-size: 20px;
 }
-.center {
-  text-align: center;
+
+.inforlist-box table {
+	width: 1000px;
+	background-color: beige;
+	text-align: center;
+	line-height: 30px;
+	border-top: 1px solid #d9d9d9;
+	border-left: 1px solid #d9d9d9;
+	border-spacing: 0;
+}
+
+.inforlist-box table th,
+td {
+	border-bottom: 1px solid #d9d9d9;
+	border-right: 1px solid #d9d9d9;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+a {
+	text-decoration: none;
+	color: green;
+}
+
+.alert {
+	padding-right: 5px;
+}
+
+.del {
+	padding-left: 5px;
+}
+
+
+/*update.htmlÑùÊ½*/
+
+.box_up{
+	width: 400px;
+	margin: 80px auto;
+}
+
+label{
+	float: left;
+	display: inline-block;
+	width: 80px;
+	height: 30px;
+	text-align: right;
+	line-height: 30px;
+	padding-right: 10px;
+}
+.box_in input{
+	width: 220px;
+	height: 30px;
+	outline:0;
+	border: 1px solid gray;
+	padding-left: 10px;
+}
+.box_in{
+	padding-top: 14px;
+}
+.box_up .box_btn {
+	padding-top: 15px;
+	padding-left: 90px;
+}
+.box_up .box_btn input{
+	width: 232px;
+	height: 35px;
+	outline:0;
+	border: 1px solid gray;
+	background: #008000;
+	color: white;
+	font-size: 16px;
 }

@@ -1,0 +1,90 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: url(../img/sky.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.zone_de_texte{
+	height: 35px;
+	width: 260px;
+	line-height: 35px;
+	padding-left: 10px;
+	font-family: "Microsoft YaHei";
+	font-size: 14px;
+	color: #000000;
+	letter-spacing: 1px;
+	border: 1px solid cornflowerblue;
+	border-radius: 25px;
+	outline:0;
+	background-color: transparent;
+}
+.zone_de_texte:hover{
+	background-color: paleturquoise;
+	border: 1px solid paleturquoise;
+}
+.zone_de_texte::placeholder{
+	color:gray;
+	}
+
+.box_big{
+	height: 220px;
+	width: 360px;
+	position:absolute;
+	padding-bottom: 0;
+	left:0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	opacity:1;
+	
+}
+
+.box_reg{
+	height: 360px;
+	width: 400px;
+	position:absolute;
+	padding-bottom: 0;
+	left:0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	opacity:1;
+}
+
+.box_in,.box_btn{
+	vertical-align: middle;
+	text-align: center;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+.box_in:first-child{
+	padding-top: 15px;
+}
+.button{
+	height: 36.99px;
+	width: 272px;
+	border-radius: 25px;
+	border: 1px solid #0b72bb;
+	background-color: #0b72bb;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 8px;
+}
+.box_info{
+	vertical-align: middle;
+	text-align: center;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+a{
+	text-decoration: none;
+	font-size: 14px;
+	color: #bf4822;
+}

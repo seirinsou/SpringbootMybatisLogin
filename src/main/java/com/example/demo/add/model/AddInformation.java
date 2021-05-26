@@ -1,6 +1,8 @@
-package com.example.demo.model;
+package com.example.demo.add.model;
 
 public class AddInformation {
+
+    private Integer idx;
 
     private String name;
 
@@ -23,6 +25,14 @@ public class AddInformation {
     private String address;
 
     private String notes;
+    
+    public Integer getIdx() {
+        return idx;
+    }
+
+    public void setIdx(Integer idx) {
+        this.idx = idx;
+    }
 
     public String getName() {
         return name;

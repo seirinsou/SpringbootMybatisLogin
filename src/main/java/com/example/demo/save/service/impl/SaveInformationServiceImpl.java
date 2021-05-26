@@ -4,11 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.demo.model.AddInformation;
+import com.example.demo.save.model.AddInformation;
 import com.example.demo.save.mapper.SaveInformationMapper;
 import com.example.demo.save.service.SaveInformationService;
 
-@Service
+@Service("SaveInformationService")
 public class SaveInformationServiceImpl implements SaveInformationService {
 
     @Autowired

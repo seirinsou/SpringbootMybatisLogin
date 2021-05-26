@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-<meta charset="UTF-8">
-<title>login</title>
-</head>
-<body background="sky.jpg">
-	<div align="center">
-		<br>
-		<br>
-		<h2>ログイン画面</h2>
-		<br>
-		<br> <span th:text="${message}"
-			style="text-color: red; font-size: 10px"></span>
-		<form method="get" action="/Homepage">
-			ユーザー名:<input type="text" name="userName" placeholder="ユーザー名入力" required /><br>
-			<br>
-			パスワード：<input type="text" name="password" placeholder="パスワード入力" required /><br>
-			<br>
-			<input type="submit" value="登録">
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+    <link href="/css/login_register.css" rel="stylesheet"></link>
+	<body>
+	<span th:text="${message}"style="text-color: red; font-size: 30px"></span>
+		<form action="/homepage" method="post">
+			<div class="box_big">
+				<div class="box_in">
+					<input class="zone_de_texte" id="userName" type="text" name="userName" placeholder="ユーザー名"/>
+				</div>
+				<div class="box_in">
+					<input class="zone_de_texte" type="password" name="password" placeholder="パスワード"/>
+				</div>
+				<div class="box_btn">
+					<input class="button" type="submit" value="ログイン"/>	
+				</div>
+				<div class="box_info">
+					<a th:href="@{/register}"><span>新規ユーザー登録</span></a>
+				</div>
+			</div>
 		</form>
-		<br>
-		<form method="post" action="/Register">
-			<input type="submit" value="新規登録">
-		</form>
-	</div>
-</body>
+	</body>
 </html>
+

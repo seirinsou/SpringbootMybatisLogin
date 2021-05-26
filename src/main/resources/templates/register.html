@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-<meta charset="UTF-8">
-<title>register</title>
-</head>
-<body background="back.jpg">
-	<div align="center">
-		<br>
-		<br>
-		<h1>新規登録画面</h1>
-		<br>
-		<br> <span th:text="${message}"
-			style="text-color: red; font-size: 10px"></span>
-		<form method="post" action="/toRegister">
-			ユーザー名<input type="text" name="userName" placeholder="ユーザー名入力" required /><br>
-			<br>
-			パスワード<input type="text" name="password" placeholder="パスワード入力" required /><br>
-			<br>
-			パスワード確認<input type="text" name="password2" placeholder="パスワードもう一度入力" required /><br>
-			<br>
-			<input type="submit" value="新規ユーザー作成">
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+    <link href="/css/login_register.css" rel="stylesheet"></link>
+	<body>
+	<span th:text="${message}"style="text-color:red;font-size:30px"></span>
+		<form action="/toRegister" method="post">
+			<div class="box_reg">
+				<div class="box_in">
+					<input class="zone_de_texte" id="userName" type="text" name="userName" placeholder="ユーザー名入力"/>
+				</div>
+				<div class="box_in">
+					<input class="zone_de_texte" id="password" type="password" name="password" placeholder="パスワード入力"/>
+				</div>
+				<div class="box_in">
+					<input class="zone_de_texte" id="password1" type="password" name="password1" placeholder="確認パスワード入力"/>
+				</div>
+				<div class="box_btn">
+					<input class="button" type="submit" value="新規登録"/>	
+				</div>
+			</div>
 		</form>
-	</div>
-</body>
+	</body>
 </html>
+

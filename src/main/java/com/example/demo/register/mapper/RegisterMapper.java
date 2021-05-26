@@ -1,7 +1,10 @@
 package com.example.demo.register.mapper;
 
-import com.example.demo.model.User;
+import org.springframework.stereotype.Repository;
 
+import com.example.demo.register.model.User;
+
+@Repository
 public interface RegisterMapper {
 
     public int add(User user);
