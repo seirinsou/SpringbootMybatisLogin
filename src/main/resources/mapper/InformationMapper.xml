@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.information.mapper.InformationMapper">
+
+	<insert id="add" parameterType="com.example.demo.information.model.SaveInformationDTO">
+		insert into userTable (name, sex, phoneNumber, applicationDate, bornDate, manager, netType, netPlan, postcode, address, notes)
+		values (#{name},#{sex},#{phoneNumber},#{applicationDate},#{bornDate},#{manager},#{netType},#{netPlan},#{postcode},#{address},#{notes})
+	</insert>
+	
+	<select id="findAllByName" resultType="com.example.demo.information.model.SearchInformationDTO">
+		select idx,name,sex,phoneNumber,applicationDate,bornDate,manager,netType,netPlan,postcode,address,notes from userTable where name like '%${name}%'
+	</select>
+	
+	<select id="findAllByIdx" resultType="com.example.demo.information.model.SearchInformationDTO">
+		select idx,name,sex,phoneNumber,applicationDate,bornDate,manager,netType,netPlan,postcode,address,notes from userTable where idx=#{idx}
+	</select>
+	
+	<update id="update" parameterType="com.example.demo.information.model.SearchInformationDTO">
+        update userTable
+        set
+        name=#{name},sex=#{sex},phoneNumber=#{phoneNumber},applicationDate=#{applicationDate},bornDate=#{bornDate},manager=#{manager},netType=#{netType},netPlan=#{netPlan},postcode=#{postcode},address=#{address},notes=#{notes}
+        where idx=#{idx}
+    </update>
+    
+    <delete id="delete" parameterType="com.example.demo.information.model.SearchInformationDTO">
+        delete from userTable where idx=#{idx}
+    </delete>
+
+</mapper>

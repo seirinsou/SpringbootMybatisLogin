@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>register</title>
+    <link href="/css/login_register.css" rel="stylesheet"></link>
+</head>
+<body background="back.jpg">
+	<div align="center">
+		<br> <br>
+		<h1>更新情報確認</h1>
+		<br>
+		<p>内容を確認してください</p>
+		<form class="ui form" method="post" action="/toupinfor">
+					<input type="hidden" name="idx" th:value="${searchinfor.idx}"/>
+			<table class="ui celled table table table-hover">
+				<tr>
+					<td>氏名:</td>
+					<td th:text="${searchinfor.name}"></td>
+				</tr>
+				<tr>
+					<td>性別:</td>
+					<td th:text="${searchinfor.sex}"></td>
+				</tr>
+				<tr>
+					<td>携帯番号:</td>
+					<td th:text="${searchinfor.phoneNumber}"></td>
+				</tr>
+				<tr>
+					<td>申込日付:</td>
+					<td th:text="${searchinfor.applicationDate}"></td>
+				</tr>
+				<tr>
+					<td>誕生日:</td>
+					<td th:text="${searchinfor.bornDate}"></td>
+				</tr>
+				<tr>
+					<td>入力担当:</td>
+					<td th:text="${searchinfor.manager}"></td>
+				</tr>
+				<tr>
+					<td>ネット会社:</td>
+					<td th:text="${searchinfor.netType}"></td>
+				</tr>
+				<tr>
+					<td>ネットプラン:</td>
+					<td th:text="${searchinfor.netPlan}"></td>
+				</tr>
+				<tr>
+					<td>郵便番号:</td>
+					<td th:text="${searchinfor.postcode}"></td>
+				</tr>
+				<tr>
+					<td>住所:</td>
+					<td th:text="${searchinfor.address}"></td>
+				</tr>
+				<tr>
+					<td>備考欄:</td>
+					<td th:text="${searchinfor.notes}"></td>
+				</tr>
+			</table>
+			<input type="button" value="戻る" onclick="goBack()">
+			<input type="hidden" name="name" th:value="${searchinfor.name}">
+			<input type="hidden" name="sex" th:value="${searchinfor.sex}">
+			<input type="hidden" name="phoneNumber" th:value="${searchinfor.phoneNumber}">
+			<input type="hidden" name="applicationDate" th:value="${searchinfor.applicationDate}">
+			<input type="hidden" name="bornDate" th:value="${searchinfor.bornDate}">
+			<input type="hidden" name="manager" th:value="${searchinfor.manager}">
+			<input type="hidden" name="netType" th:value="${searchinfor.netType}">
+			<input type="hidden" name="netPlan" th:value="${searchinfor.netPlan}">
+			<input type="hidden" name="postcode" th:value="${searchinfor.postcode}">
+			<input type="hidden" name="address" th:value="${searchinfor.address}">
+			<input type="hidden" name="notes" th:value="${searchinfor.notes}">
+			<input type="submit" value="作成完了">
+		</form>
+	</div>
+	<script>
+function goBack(){
+    window.history.back()
+}
+</script>
+</body>
+</html>

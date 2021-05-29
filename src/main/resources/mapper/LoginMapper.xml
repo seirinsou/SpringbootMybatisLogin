@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.example.demo.home.mapper.LoginMapper">
+<mapper namespace="com.example.demo.user.mapper.LoginMapper">
 	<select id="queryByUserName"
-		resultType="com.example.demo.home.model.User">
+		resultType="com.example.demo.user.model.UserLoginDTO">
 		select user_name,password from users where user_name=#{userName}
 	</select>
-	
-	<select id="findAllByName" resultType="com.example.demo.home.model.AddInformation">
-		select idx,name,sex,phoneNumber,applicationDate,bornDate,manager,netType,netPlan,postcode,address,notes from userTable where name like '%${name}%'
-	</select>
-	
-	<update id="update" parameterType="com.example.demo.home.model.AddInformation">
-        update userTable
-        set
-        name=#{name},sex=#{sex},phoneNumber=#{phoneNumber},applicationDate=#{applicationDate},bornDate=#{bornDate},manager=#{manager},netType=#{netType},netPlan=#{netPlan},postcode=#{postcode},address=#{address},notes=#{notes}
-        where idx=#{idx}
-    </update>
-    
-    <delete id="delete" parameterType="com.example.demo.home.model.AddInformation">
-        delete from userTable where name=#{name}
-    </delete>
 
 </mapper>
