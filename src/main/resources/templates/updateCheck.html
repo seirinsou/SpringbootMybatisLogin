@@ -12,65 +12,65 @@
 		<br>
 		<p>内容を確認してください</p>
 		<form class="ui form" method="post" action="/toupinfor">
-					<input type="hidden" name="idx" th:value="${searchinfor.idx}"/>
+					<input type="hidden" name="idx" th:value="${updateInforIn.idx}"/>
 			<table class="ui celled table table table-hover">
 				<tr>
 					<td>氏名:</td>
-					<td th:text="${searchinfor.name}"></td>
+					<td th:text="${updateInforIn.name}"></td>
 				</tr>
 				<tr>
 					<td>性別:</td>
-					<td th:text="${searchinfor.sex}"></td>
+					<td th:text="${updateInforIn.sex}"></td>
 				</tr>
 				<tr>
 					<td>携帯番号:</td>
-					<td th:text="${searchinfor.phoneNumber}"></td>
+					<td th:text="${updateInforIn.phoneNumber}"></td>
 				</tr>
 				<tr>
 					<td>申込日付:</td>
-					<td th:text="${searchinfor.applicationDate}"></td>
+					<td th:text="${updateInforIn.applicationDate}"></td>
 				</tr>
 				<tr>
 					<td>誕生日:</td>
-					<td th:text="${searchinfor.bornDate}"></td>
+					<td th:text="${updateInforIn.bornDate}"></td>
 				</tr>
 				<tr>
 					<td>入力担当:</td>
-					<td th:text="${searchinfor.manager}"></td>
+					<td th:text="${updateInforIn.manager}"></td>
 				</tr>
 				<tr>
 					<td>ネット会社:</td>
-					<td th:text="${searchinfor.netType}"></td>
+					<td th:text="${updateInforIn.netType}"></td>
 				</tr>
 				<tr>
 					<td>ネットプラン:</td>
-					<td th:text="${searchinfor.netPlan}"></td>
+					<td th:text="${updateInforIn.netPlan}"></td>
 				</tr>
 				<tr>
 					<td>郵便番号:</td>
-					<td th:text="${searchinfor.postcode}"></td>
+					<td th:text="${updateInforIn.postcode}"></td>
 				</tr>
 				<tr>
 					<td>住所:</td>
-					<td th:text="${searchinfor.address}"></td>
+					<td th:text="${updateInforIn.address}"></td>
 				</tr>
 				<tr>
 					<td>備考欄:</td>
-					<td th:text="${searchinfor.notes}"></td>
+					<td th:text="${updateInforIn.notes}"></td>
 				</tr>
 			</table>
 			<input type="button" value="戻る" onclick="goBack()">
-			<input type="hidden" name="name" th:value="${searchinfor.name}">
-			<input type="hidden" name="sex" th:value="${searchinfor.sex}">
-			<input type="hidden" name="phoneNumber" th:value="${searchinfor.phoneNumber}">
-			<input type="hidden" name="applicationDate" th:value="${searchinfor.applicationDate}">
-			<input type="hidden" name="bornDate" th:value="${searchinfor.bornDate}">
-			<input type="hidden" name="manager" th:value="${searchinfor.manager}">
-			<input type="hidden" name="netType" th:value="${searchinfor.netType}">
-			<input type="hidden" name="netPlan" th:value="${searchinfor.netPlan}">
-			<input type="hidden" name="postcode" th:value="${searchinfor.postcode}">
-			<input type="hidden" name="address" th:value="${searchinfor.address}">
-			<input type="hidden" name="notes" th:value="${searchinfor.notes}">
+			<input type="hidden" name="name" th:value="${updateInforIn.name}">
+			<input type="hidden" name="sex" th:value="${updateInforIn.sex}">
+			<input type="hidden" name="phoneNumber" th:value="${updateInforIn.phoneNumber}">
+			<input type="hidden" name="applicationDate" th:value="${updateInforIn.applicationDate}">
+			<input type="hidden" name="bornDate" th:value="${updateInforIn.bornDate}">
+			<input type="hidden" name="manager" th:value="${updateInforIn.manager}">
+			<input type="hidden" name="netType" th:value="${updateInforIn.netType}">
+			<input type="hidden" name="netPlan" th:value="${updateInforIn.netPlan}">
+			<input type="hidden" name="postcode" th:value="${updateInforIn.postcode}">
+			<input type="hidden" name="address" th:value="${updateInforIn.address}">
+			<input type="hidden" name="notes" th:value="${updateInforIn.notes}">
 			<input type="submit" value="作成完了">
 		</form>
 	</div>

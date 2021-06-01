@@ -20,61 +20,61 @@ function goBack(){
 			<table class="ui celled table table table-hover">
 				<tr>
 					<td>氏名:</td>
-					<td th:text="${addinfor.name}"></td>
+					<td th:text="${addInforIn.name}"></td>
 				</tr>
 				<tr>
 					<td>性別:</td>
-					<td th:text="${addinfor.sex}"></td>
+					<td th:text="${addInforIn.sex}"></td>
 				</tr>
 				<tr>
 					<td>携帯番号:</td>
-					<td th:text="${addinfor.phoneNumber}"></td>
+					<td th:text="${addInforIn.phoneNumber}"></td>
 				</tr>
 				<tr>
 					<td>申込日付:</td>
-					<td th:text="${addinfor.applicationDate}"></td>
+					<td th:text="${addInforIn.applicationDate}"></td>
 				</tr>
 				<tr>
 					<td>誕生日:</td>
-					<td th:text="${addinfor.bornDate}"></td>
+					<td th:text="${addInforIn.bornDate}"></td>
 				</tr>
 				<tr>
 					<td>入力担当:</td>
-					<td th:text="${addinfor.manager}"></td>
+					<td th:text="${addInforIn.manager}"></td>
 				</tr>
 				<tr>
 					<td>ネット会社:</td>
-					<td th:text="${addinfor.netType}"></td>
+					<td th:text="${addInforIn.netType}"></td>
 				</tr>
 				<tr>
 					<td>ネットプラン:</td>
-					<td th:text="${addinfor.netPlan}"></td>
+					<td th:text="${addInforIn.netPlan}"></td>
 				</tr>
 				<tr>
 					<td>郵便番号:</td>
-					<td th:text="${addinfor.postcode}"></td>
+					<td th:text="${addInforIn.postcode}"></td>
 				</tr>
 				<tr>
 					<td>住所:</td>
-					<td th:text="${addinfor.address}"></td>
+					<td th:text="${addInforIn.address}"></td>
 				</tr>
 				<tr>
 					<td>備考欄:</td>
-					<td th:text="${addinfor.notes}"></td>
+					<td th:text="${addInforIn.notes}"></td>
 				</tr>
 			</table>
 			<input type="button" value="戻る" onclick="goBack()">
-			<input type="hidden" name="name" th:value="${addinfor.name}">
-			<input type="hidden" name="sex" th:value="${addinfor.sex}">
-			<input type="hidden" name="phoneNumber" th:value="${addinfor.phoneNumber}">
-			<input type="hidden" name="applicationDate" th:value="${addinfor.applicationDate}">
-			<input type="hidden" name="bornDate" th:value="${addinfor.bornDate}">
-			<input type="hidden" name="manager" th:value="${addinfor.manager}">
-			<input type="hidden" name="netType" th:value="${addinfor.netType}">
-			<input type="hidden" name="netPlan" th:value="${addinfor.netPlan}">
-			<input type="hidden" name="postcode" th:value="${addinfor.postcode}">
-			<input type="hidden" name="address" th:value="${addinfor.address}">
-			<input type="hidden" name="notes" th:value="${addinfor.notes}">
+			<input type="hidden" name="name" th:value="${addInforIn.name}">
+			<input type="hidden" name="sex" th:value="${addInforIn.sex}">
+			<input type="hidden" name="phoneNumber" th:value="${addInforIn.phoneNumber}">
+			<input type="hidden" name="applicationDate" th:value="${addInforIn.applicationDate}">
+			<input type="hidden" name="bornDate" th:value="${addInforIn.bornDate}">
+			<input type="hidden" name="manager" th:value="${addInforIn.manager}">
+			<input type="hidden" name="netType" th:value="${addInforIn.netType}">
+			<input type="hidden" name="netPlan" th:value="${addInforIn.netPlan}">
+			<input type="hidden" name="postcode" th:value="${addInforIn.postcode}">
+			<input type="hidden" name="address" th:value="${addInforIn.address}">
+			<input type="hidden" name="notes" th:value="${addInforIn.notes}">
 			<input type="submit" value="作成完了">
 		</form>
 	</div>

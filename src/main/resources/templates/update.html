@@ -7,51 +7,51 @@
 	<link href="/css/list.css" rel="stylesheet"></link>
 	<body>
 		<form action="/toupdateCheck" method="post">
-				<input type="hidden" name="idx" th:value="${searchinfor.idx}"/>
+				<input type="hidden" name="idx" th:value="${updateInforOut.idx}"/>
 			<div class="box_up">
 				<div class="box_in">
 					<label>氏名:</label>
-					<input class="zone_de_texte" id="name" type="text" name="name" th:value="${searchinfor.name}"/>
+					<input class="zone_de_texte" id="name" type="text" name="name" th:value="${updateInforOut.name}"/>
 				</div>
 				<div class="box_in">
 					<label>性別:</label>
-					<input class="zone_de_texte" type="sex" name="sex" th:value="${searchinfor.sex}"/>
+					<input class="zone_de_texte" type="sex" name="sex" th:value="${updateInforOut.sex}"/>
 				</div>
 				<div class="box_in">
 					<label>電話番号:</label>
-					<input class="zone_de_texte" type="tel" name="phoneNumber" th:value="${searchinfor.phoneNumber}"/>
+					<input class="zone_de_texte" type="tel" name="phoneNumber" th:value="${updateInforOut.phoneNumber}"/>
 				</div>
 				<div class="box_in">
 					<label>申込日時:</label>
-					<input class="zone_de_texte" type="text" name="applicationDate" th:value="${searchinfor.applicationDate}"/>
+					<input class="zone_de_texte" type="text" name="applicationDate" th:value="${updateInforOut.applicationDate}"/>
 				</div>
 				<div class="box_in">
 					<label>生年月日:</label>
-					<input class="zone_de_texte" type="text" name="bornDate" th:value="${searchinfor.bornDate}"/>
+					<input class="zone_de_texte" type="text" name="bornDate" th:value="${updateInforOut.bornDate}"/>
 				</div>
 				<div class="box_in">
 					<label>入力担当:</label>
-					<input class="zone_de_texte" type="text" name="manager" th:value="${searchinfor.manager}"/>
+					<input class="zone_de_texte" type="text" name="manager" th:value="${updateInforOut.manager}"/>
 				</div>
 				<div class="box_in">
 					<label>ネット会社:</label>
-					<input class="zone_de_texte" type="text" name="netType" th:value="${searchinfor.netType}"/>
+					<input class="zone_de_texte" type="text" name="netType" th:value="${updateInforOut.netType}"/>
 				</div>
 				<div class="box_in">
 					<label>ネットプラン:</label>
-					<input class="zone_de_texte" type="text" name="netPlan" th:value="${searchinfor.netPlan}"/>
+					<input class="zone_de_texte" type="text" name="netPlan" th:value="${updateInforOut.netPlan}"/>
 				</div>
 				<div class="box_in">
 					<label>郵便番号:</label>
-					<input class="zone_de_texte" type="text" name="postcode" th:value="${searchinfor.postcode}"/>
+					<input class="zone_de_texte" type="text" name="postcode" th:value="${updateInforOut.postcode}"/>
 				</div>
 				<div class="box_in">
 					<label>住所:</label>
-					<input class="zone_de_texte" type="text" name="address" th:value="${searchinfor.address}"/>
+					<input class="zone_de_texte" type="text" name="address" th:value="${updateInforOut.address}"/>
 				</div>
 				<div class="box_in">
 					<label>備考:</label>
-					<input class="zone_de_texte" type="text" name="notes" th:value="${searchinfor.notes}"/>
+					<input class="zone_de_texte" type="text" name="notes" th:value="${updateInforOut.notes}"/>
 				</div>
 				<div class="box_btn">
 					<input class="button" type="submit" value="確定"/>

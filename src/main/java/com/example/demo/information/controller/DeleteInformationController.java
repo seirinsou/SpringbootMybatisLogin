@@ -5,27 +5,26 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
-import com.example.demo.information.model.SearchInformationDTO;
-import com.example.demo.information.service.InformationService;
+import com.example.demo.information.model.DeleteInformationOutDTO;
+import com.example.demo.information.service.DeleteInformationService;
 
 @Controller("DeleteInformationController")
 public class DeleteInformationController {
     
     @Autowired
-    InformationService informationService;
+    DeleteInformationService deleteInformationService;
     
-    @RequestMapping("todelete")
-    public String updateInformationCheck(Model model,RedirectAttributes attributes,SearchInformationDTO searchinfor){
-        model.addAttribute("searchinfor", searchinfor);
+    @RequestMapping("delete")
+    public String toDeleteCheck(Model model,@ModelAttribute DeleteInformationOutDTO delInfor){
+        DeleteInformationOutDTO delInfor1 = deleteInformationService.findByIdx(delInfor.getIdx());
+        model.addAttribute("delInfor", delInfor);
         return "deleteCheck";
     }
     
     @RequestMapping("/deleinfor")
-    public String deleInfor(Model model,@ModelAttribute SearchInformationDTO searchinfor, Integer idx) {
-        informationService.delete(idx);
-        model.addAttribute("user",searchinfor);
+    public String deleteInformation(Model model,@ModelAttribute DeleteInformationOutDTO delInfor, Integer idx) {
+        deleteInformationService.delete(idx);
+        model.addAttribute("user",delInfor);
         return "redirect:/search";
     }
 

@@ -9,23 +9,23 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import com.example.demo.information.model.SearchInformationDTO;
-import com.example.demo.information.service.InformationService;
+import com.example.demo.information.model.SearchInformationOutDTO;
+import com.example.demo.information.service.SearchInformationService;
 
 @Controller("SearchInformationController")
 @SessionAttributes("userId")
 public class SearchInformationController {
     
     @Autowired
-    InformationService informationService;
+    SearchInformationService searchInformationService;
     
     @RequestMapping("/search")
     public String displayList(Model model,
-            @ModelAttribute SearchInformationDTO searchinfor) {
+            @ModelAttribute SearchInformationOutDTO searchInforOut) {
         if((String) model.asMap().get("message")!=null) {
             model.addAttribute("message",(String) model.asMap().get("message"));
         }
-        List<SearchInformationDTO> informationList = informationService.findAllByName(searchinfor.getName());
+        List<SearchInformationOutDTO> informationList = searchInformationService.findAllByName(searchInforOut.getName());
         model.addAttribute("informationList", informationList);
         model.addAttribute("userId",model.getAttribute("userId"));
         
