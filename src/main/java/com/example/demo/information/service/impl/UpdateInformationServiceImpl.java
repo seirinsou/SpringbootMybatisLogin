@@ -20,18 +20,6 @@ public class UpdateInformationServiceImpl implements UpdateInformationService {
     }
     @Override
     public int update(UpdateInformationInDTO updateInforIn) {
-        UpdateInformationOutDTO updateInforOutDTO = findAllByIdx(updateInforIn.getIdx());
-        updateInforOutDTO.setName(updateInforIn.getName());
-        updateInforOutDTO.setAddress(updateInforIn.getAddress());
-        updateInforOutDTO.setApplicationDate(updateInforIn.getApplicationDate());
-        updateInforOutDTO.setBornDate(updateInforIn.getBornDate());
-        updateInforOutDTO.setManager(updateInforIn.getManager());
-        updateInforOutDTO.setNetPlan(updateInforIn.getNetPlan());
-        updateInforOutDTO.setNetType(updateInforIn.getNetType());
-        updateInforOutDTO.setNotes(updateInforIn.getNotes());
-        updateInforOutDTO.setPhoneNumber(updateInforIn.getPhoneNumber());
-        updateInforOutDTO.setPostcode(updateInforIn.getPostcode());
-        updateInforOutDTO.setSex(updateInforIn.getSex());
         return updateInformationMapper.update(updateInforIn);
     }
 

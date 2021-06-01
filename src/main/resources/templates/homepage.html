@@ -23,6 +23,7 @@
 		  			<form method="post" action="" id="update-delete">
 		<table>
       <tr>
+        <th> </th>
         <th>名前</th>
         <th>性別</th>
         <th>電話番号</th>
@@ -37,6 +38,7 @@
         <th>操作</th>
       </tr>
         <tr th:each="searchInforOut,iterStat:${informationList}">
+            <td><input type="radio" name="idx" th:value="${searchInforOut.idx}"></td>
             <td class="center" th:text="${searchInforOut.name}"></td>
             <td class="center" th:text="${searchInforOut.sex}"></td>
             <td class="center" th:text="${searchInforOut.phoneNumber}"></td>
@@ -49,20 +51,8 @@
             <td class="center" th:text="${searchInforOut.address}"></td>
             <td class="center" th:text="${searchInforOut.notes}"></td>
             <td>
-			<input type="hidden" name="idx" th:value="${searchInforOut.idx}">
-			<input type="hidden" name="name" th:value="${searchInforOut.name}">
-			<input type="hidden" name="sex" th:value="${searchInforOut.sex}">
-			<input type="hidden" name="phoneNumber" th:value="${searchInforOut.phoneNumber}">
-			<input type="hidden" name="applicationDate" th:value="${searchInforOut.applicationDate}">
-			<input type="hidden" name="bornDate" th:value="${searchInforOut.bornDate}">
-			<input type="hidden" name="manager" th:value="${searchInforOut.manager}">
-			<input type="hidden" name="netType" th:value="${searchInforOut.netType}">
-			<input type="hidden" name="netPlan" th:value="${searchInforOut.netPlan}">
-			<input type="hidden" name="postcode" th:value=${searchInforOut.postcode}>
-			<input type="hidden" name="address" th:value="${searchInforOut.address}">
-			<input type="hidden" name="notes" th:value="${searchInforOut.notes}">
-					<a href="javascript:update();"><img class="alert">編集</a>
-					<a href="javascript:deleteCheck();"><img class="alert">削除</a>
+			<a href="javascript:update();"><img class="alert">編集</a>
+			<a href="javascript:deleteCheck();"><img class="alert">削除</a>
             </td>
         </tr>
   </table>

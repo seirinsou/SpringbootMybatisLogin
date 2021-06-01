@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import com.example.demo.information.model.SearchInformationInDTO;
 import com.example.demo.information.model.SearchInformationOutDTO;
 import com.example.demo.information.service.SearchInformationService;
 
@@ -21,11 +22,11 @@ public class SearchInformationController {
     
     @RequestMapping("/search")
     public String displayList(Model model,
-            @ModelAttribute SearchInformationOutDTO searchInforOut) {
+            @ModelAttribute SearchInformationInDTO searchInforIn) {
         if((String) model.asMap().get("message")!=null) {
             model.addAttribute("message",(String) model.asMap().get("message"));
         }
-        List<SearchInformationOutDTO> informationList = searchInformationService.findAllByName(searchInforOut.getName());
+        List<SearchInformationOutDTO> informationList = searchInformationService.findAllByName(searchInforIn.getName());
         model.addAttribute("informationList", informationList);
         model.addAttribute("userId",model.getAttribute("userId"));
         

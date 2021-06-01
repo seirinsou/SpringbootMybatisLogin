@@ -17,26 +17,14 @@ public class UpdateInformationController {
     UpdateInformationService updateInformationService;
     
     @RequestMapping("/update")
-    public String updateInformation(Model model,@ModelAttribute UpdateInformationOutDTO updateInforOut, UpdateInformationInDTO updateInforIn){
-        UpdateInformationOutDTO updateInforOutDTO = updateInformationService.findAllByIdx(updateInforOut.getIdx());
-        updateInforIn.setIdx(updateInforOutDTO.getIdx());
-        updateInforIn.setName(updateInforOutDTO.getName());
-        updateInforIn.setSex(updateInforOutDTO.getSex());
-        updateInforIn.setPhoneNumber(updateInforOutDTO.getPhoneNumber());
-        updateInforIn.setApplicationDate(updateInforOutDTO.getApplicationDate());
-        updateInforIn.setBornDate(updateInforOutDTO.getBornDate());
-        updateInforIn.setAddress(updateInforOutDTO.getAddress());
-        updateInforIn.setManager(updateInforOutDTO.getManager());
-        updateInforIn.setNetPlan(updateInforOutDTO.getNetPlan());
-        updateInforIn.setNetType(updateInforOutDTO.getNetType());
-        updateInforIn.setNotes(updateInforOutDTO.getNotes());
-        updateInforIn.setPostcode(updateInforOutDTO.getPostcode());
-        model.addAttribute("updateInforOut", updateInforIn);
+    public String updateInformation(Model model,@ModelAttribute UpdateInformationInDTO updateInforIn){
+        UpdateInformationOutDTO updateInforOut = updateInformationService.findAllByIdx(updateInforIn.getIdx());
+        model.addAttribute("updateInforOut", updateInforOut);
         return "update";
     }
     @RequestMapping("/toupdateCheck")
-    public String updateInformationCheck(Model model,@ModelAttribute UpdateInformationOutDTO updateInforOut){
-        model.addAttribute("updateInforIn", updateInforOut);
+    public String updateInformationCheck(Model model,@ModelAttribute UpdateInformationInDTO updateInforIn){
+        model.addAttribute("updateInforIn", updateInforIn);
         return "updateCheck";
     }
     @RequestMapping("/toupinfor")

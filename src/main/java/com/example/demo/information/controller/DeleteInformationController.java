@@ -17,21 +17,9 @@ public class DeleteInformationController {
     DeleteInformationService deleteInformationService;
     
     @RequestMapping("delete")
-    public String toDeleteCheck(Model model,@ModelAttribute DeleteInformationOutDTO delInforOut, DeleteInformationInDTO delInforIn){
-        DeleteInformationOutDTO delInforOutDTO = deleteInformationService.findByIdx(delInforOut.getIdx());
-        delInforIn.setIdx(delInforOutDTO.getIdx());
-        delInforIn.setName(delInforOutDTO.getName());
-        delInforIn.setSex(delInforOutDTO.getSex());
-        delInforIn.setPhoneNumber(delInforOutDTO.getPhoneNumber());
-        delInforIn.setApplicationDate(delInforOutDTO.getApplicationDate());
-        delInforIn.setBornDate(delInforOutDTO.getBornDate());
-        delInforIn.setAddress(delInforOutDTO.getAddress());
-        delInforIn.setManager(delInforOutDTO.getManager());
-        delInforIn.setNetPlan(delInforOutDTO.getNetPlan());
-        delInforIn.setNetType(delInforOutDTO.getNetType());
-        delInforIn.setNotes(delInforOutDTO.getNotes());
-        delInforIn.setPostcode(delInforOutDTO.getPostcode());
-        model.addAttribute("delInforOut", delInforIn);
+    public String toDeleteCheck(Model model,@ModelAttribute DeleteInformationInDTO delInforIn){
+        DeleteInformationOutDTO delInforOut = deleteInformationService.findByIdx(delInforIn.getIdx());
+        model.addAttribute("delInforOut", delInforOut);
         return "deleteCheck";
     }
     
