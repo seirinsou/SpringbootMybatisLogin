@@ -62,7 +62,7 @@
 			<input type="hidden" name="address" th:value="${searchInforOut.address}">
 			<input type="hidden" name="notes" th:value="${searchInforOut.notes}">
 					<a href="javascript:update();"><img class="alert">編集</a>
-					<a href="javascript:delete();"><img class="del">削除</a>
+					<a href="javascript:deleteCheck();"><img class="alert">削除</a>
             </td>
         </tr>
   </table>
@@ -75,6 +75,13 @@
 	form.action="update";
 	form.submit();
 	}
+	function deleteCheck(){
+	var form;
+	form = document.getElementById("update-delete");
+	form.action="delete";
+	form.submit();
+	}
+	
 	</script>
 </body>
 </html>

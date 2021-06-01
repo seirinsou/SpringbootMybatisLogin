@@ -6,7 +6,7 @@
 		select idx,name,sex,phoneNumber,applicationDate,bornDate,manager,netType,netPlan,postcode,address,notes from userTable where idx=#{idx}
 	</select>
 	
-    <delete id="delete" parameterType="com.example.demo.information.model.DeleteInformationOutDTO">
+    <delete id="delete" parameterType="com.example.demo.information.model.DeleteInformationInDTO">
         delete from userTable where idx=#{idx}
     </delete>
 
