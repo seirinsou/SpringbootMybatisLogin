@@ -15,7 +15,7 @@
 		<br>
 		<br> <span th:text="${message}"style="text-color: red; font-size: 10px"></span><br>
 		<form method="post" id="search" action="/search">
-		氏名:<input type="text" name="name" th:value="${name}">
+		氏名:<input type="text" name="name" th:value="${searchInfor.searchName}">
 			<input type="submit" value="検索">
 			<a th:href="@{addInformation}">新規登録はこちら</a><br>
 		<br><br>
@@ -37,7 +37,7 @@
         <th>備考</th>
         <th>操作</th>
       </tr>
-        <tr th:each="searchInforOut,iterStat:${informationList}">
+        <tr th:each="searchInforOut,iterStat:${searchInfor.searchInforList}">
             <td><input type="radio" name="idx" th:value="${searchInforOut.idx}"></td>
             <td class="center" th:text="${searchInforOut.name}"></td>
             <td class="center" th:text="${searchInforOut.sex}"></td>

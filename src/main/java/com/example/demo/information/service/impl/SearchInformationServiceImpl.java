@@ -1,7 +1,5 @@
 package com.example.demo.information.service.impl;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,8 +14,11 @@ public class SearchInformationServiceImpl implements SearchInformationService {
     SearchInformationMapper searchInformationMapper;
 
     @Override
-    public List<SearchInformationOutDTO> findAllByName(String name) {
-        return searchInformationMapper.findAllByName(name);
+    public SearchInformationOutDTO findAllByName(String name) {
+        SearchInformationOutDTO searchInforOut = new SearchInformationOutDTO();
+        searchInforOut.setSearchName(name);
+        searchInforOut.setSearchInforList(searchInformationMapper.findAllByName(name));
+        return searchInforOut;
     }
 
 }

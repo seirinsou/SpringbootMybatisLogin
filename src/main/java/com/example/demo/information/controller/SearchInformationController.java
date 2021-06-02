@@ -1,7 +1,5 @@
 package com.example.demo.information.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,8 +24,8 @@ public class SearchInformationController {
         if((String) model.asMap().get("message")!=null) {
             model.addAttribute("message",(String) model.asMap().get("message"));
         }
-        List<SearchInformationOutDTO> informationList = searchInformationService.findAllByName(searchInforIn.getName());
-        model.addAttribute("informationList", informationList);
+        SearchInformationOutDTO searchInfor = searchInformationService.findAllByName(searchInforIn.getName());
+        model.addAttribute("searchInfor", searchInfor);
         model.addAttribute("userId",model.getAttribute("userId"));
         
         return "homepage";
